@@ -29,8 +29,30 @@ Let's start with recoding how to play with Mathematica.
 
  Not everything can be compiled, and very simple code might not benefit,
   but complex low-level numerical code can get a really big speedup.
+  
+  Be aware though that many Mathematica functions like Table, Plot, NIntegrate, and so on automatically compile their arguments, so you won’t see any improvement when passing them compiled versions of your code.
+  
+But we can go further by giving Compile some hints about the parallelizable nature of the code, getting an even better result. For example, "RuntimeAttributes->{Listable}, Parallelization->True, CompilationTarget->"C".
 
-Be aware though that many Mathematica functions like Table, Plot, NIntegrate, and so on automatically compile their arguments, so you won’t see any improvement when passing them compiled versions of your code.
+* Use built-in functions.
+* Use Wolfram Workbench.
+* Remember values that you will need in the future.
+
+ fib[n_]:= fib[n] = fib[n-2] + fib[n-1]
+
+* Parallelize. 
+ 
+ There is a collection of tools for this, but for very independent tasks, you can get quite a long way with just ParallelTable, ParallelMap, and ParallelTry.
+
+* Use Sow and Reap to accumulate large amounts of data (not AppendTo).
+
+* Use Block or With rather than Module.
+
+* Go easy on pattern matching.
+* Try doing things differently.
+
+
+
 
 ## A short overview
 
