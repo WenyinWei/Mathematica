@@ -37,9 +37,9 @@ But we can go further by giving Compile some hints about the parallelizable natu
 * Use built-in functions.
 * Use Wolfram Workbench.
 * Remember values that you will need in the future.
-
+``` Mathematica
  fib[n_]:= fib[n] = fib[n-2] + fib[n-1]
-
+```
 * Parallelize. 
  
  There is a collection of tools for this, but for very independent tasks, you can get quite a long way with just ParallelTable, ParallelMap, and ParallelTry.
