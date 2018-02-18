@@ -4,7 +4,10 @@ Author        : Wenyin Wei
 Email         : weiwy16@mails.tsinghua.edu.cn
 
 Bibliography  : example.bib
+Package       : url
 
+
+    
 [INCLUDE=book]
 [INCLUDE=webtoc]
 [INCLUDE=webanchors]
@@ -32,14 +35,15 @@ Let's start with recoding how to play with Mathematica.
   Be aware though that many Mathematica functions like Table, Plot, NIntegrate, and so on automatically compile their arguments, so you won’t see any improvement when passing them compiled versions of your code.
   
 But we can go further by giving Compile some hints about the parallelizable nature of the code, getting an even better result. For example:
-```Mathematica
-"RuntimeAttributes->{Listable}, Parallelization->True, CompilationTarget->"C".
 ```
+  "RuntimeAttributes->{Listable}, Parallelization->True, CompilationTarget->"C".
+```
+
 
 * Use built-in functions.
 * Use Wolfram Workbench.
 * Remember values that you will need in the future.
-``` Mathematica
+``` 
  fib[n_]:= fib[n] = fib[n-2] + fib[n-1]
 ```
 * Parallelize. 
