@@ -1,0 +1,10 @@
+ParallelTable
+ParallelMap
+ParallelTry
+AppendTo
+CompilationTarget
+RuntimeAttributes
+NIntegrate
+parallelizable
+Pillsy
+ExportSVG
