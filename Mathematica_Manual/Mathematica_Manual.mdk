@@ -124,7 +124,11 @@ It was dangerous to export a low plot with low resolution.
 ```
 Export["irur.png", %52, ImageResolution -> 300]
 ```
+# Equation
+## Differential Equations
+Before running DSolve function, it it necessary to remove the corresponding function.
 
+Remove[u[x,]
 
 
 [BIB]
